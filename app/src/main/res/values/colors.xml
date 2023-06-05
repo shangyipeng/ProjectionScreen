@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="fFAF8F8">#FAF8F8</color>
+    <color name="f66000000">#66000000</color>
+    <color name="fFFF5F5F5">#FFF5F5F5</color>
+    <color name="f00000000">#00000000</color>
+    <color name="f03000000">#03000000</color>
+    <color name="f06000000">#03000000</color>
+    <color name="fdde0e5">#dde0e5</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="fFFC107">#c0ffbd21</color>
+    <color name="hui">#e5e5e5</color>
+    <color name="f2BBDF3">#2BBDF3</color> <!-- Aqua -->
+    <!-- 页面背景 -->
+    <color name="page_bg">#FAF8F8</color>
+    <!-- 灰-线 -->
+    <color name="gray_line">#dddddd</color>
+    <!-- 灰-字 -->
+    <color name="f999999">#999999</color>
+    <color name="f484F57">#484F57</color>
+
+    <color name="color_0F0F10">#0F0F10</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="baseColorBlack">#000000</color>
+    <color name="blueEnd">#3171fe</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_3893FF">#3893FF</color>
+    <color name="color_999898">#999898</color>
+    <color name="color_FF3E3E">#FF3E3E</color>
+    <color name="color_1D1E22">#1D1E22</color>
+    <color name="color_DADADA">#DADADA</color>
+    <color name="color_FF0000">#FF0000</color>
+    <color name="color_3F3F42">#3F3F42</color>
+    <color name="colorAccent">#1B96F8</color>
+    <color name="color_B8D8FF">#B8D8FF</color>
+    <!-- 对话框分割线 -->
+    <color name="dialog_divide_line">#bababa</color>
+    <color name="list_item_desc">#666666</color>
+    <color name="color_222226">#222226</color>
+    <color name="color_FF0101">#FF0101</color>
+    <color name="baseColorBlack99">#99000000</color>
+
+    <color name="audiocall_main_bg">#1B1B1B</color>
+    <color name="audiocall_green_bg">#34c759</color>
+    <color name="audiocall_title_bg">#B7B7B7</color>
+    <color name="audiocall_witch_bg">#FFFFFF</color>
+    <color name="rl_main_bg">#1B1B1B</color>
+    <color name="videocall_green_bg">#00A66B</color>
+    <color name="videocall_title_bg">#B7B7B7</color>
+</resources>

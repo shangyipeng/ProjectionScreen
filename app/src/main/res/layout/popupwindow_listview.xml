@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/PopupwindowAdapterView"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/PopupwindowAdapterImageView"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@mipmap/popupwindow_adapterimageview"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_10"/>
+        <TextView
+            android:id="@+id/PopupwindowAdapterTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_16"
+            android:padding="@dimen/dp_5"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"/>
+    </LinearLayout>
+
+</LinearLayout>

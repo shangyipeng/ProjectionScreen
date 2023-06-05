@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/f00000000">
+    <com.example.myapplication.view.SanJiaoView
+        android:id="@+id/sanjiaoView"
+        android:layout_width="@dimen/dp_15"
+        android:layout_height="@dimen/dp_15"
+        android:layout_marginLeft="2.5dp"
+        app:sjv_color="@color/f484F57"
+        app:sjv_direction="top"
+        app:sjv_resolutionHeight="@dimen/dp_10"
+        app:sjv_resolutionWidth="@dimen/dp_10"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_20"/>
+
+    <RelativeLayout
+        android:id="@+id/sanJiao_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sanjiaoView"
+        android:background="@color/f484F57">
+        <ListView
+            android:id="@+id/lsvMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

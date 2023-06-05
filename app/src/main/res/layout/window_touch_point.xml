@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="90dp"
+    android:layout_height="90dp"
+    android:background="@color/f03000000">
+<!--    f03000000-->
+</TextView>

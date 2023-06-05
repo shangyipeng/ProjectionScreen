@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/audiocallingactivity_bg"
+    android:id="@+id/WatchActivity_RelativeLayout">
+    <com.tencent.rtmp.ui.TXCloudVideoView
+        android:id="@+id/live_cloud_remote_screenshare"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/audiocallingactivity_bg"
+        android:layout_marginBottom="62dp"/>
+
+    <com.tencent.rtmp.ui.TXCloudVideoView
+        android:id="@+id/txcvv_main_local"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="invisible"/>
+    <LinearLayout
+        android:id="@+id/LinearLayout_operate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/fdde0e5"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:id="@+id/ll_room_info"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/trtc_ic_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/common_ic_back1" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Distal_back"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/distal_back" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Distal_home"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/distal_home" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Distal_Taskbar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/distal_taskbar" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <com.example.myapplication.view.onDraw
+        android:id="@+id/WatchActivity_RelativeLayout_RandomBoll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="62dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

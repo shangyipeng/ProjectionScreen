@@ -1,0 +1,31 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url'https://maven.aliyun.com/nexus/content/repositories/jcenter'}
+        maven { url "https://jitpack.io" }
+        flatDir {
+            dirs '../repositories'
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url'https://maven.aliyun.com/nexus/content/repositories/jcenter'}
+        maven { url "https://jitpack.io" }
+        flatDir {
+            dirs '../repositories'
+        }
+    }
+}
+rootProject.name = "ProjectionScreen"
+include ':app'
+include ':Debug'
+include ':Common'
+include ':VideoCall'
+include ':AudioCall'

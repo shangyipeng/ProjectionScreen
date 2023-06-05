@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_50"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/HistoryDataAdapter_LinearLayout">
+    <TextView
+        android:id="@+id/HistoryDataAdapter_week"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="周日"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/f999999"
+        android:gravity="center"/>
+    <LinearLayout
+        android:id="@+id/HistoryDataAdapter_dayLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/HistoryDataAdapter_day"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="match_parent"
+            android:text="7"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_regist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/incloud_layout"/>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="wrap_content"
+                android:text="帐   号 :"
+                android:textSize="@dimen/sp_20"
+                android:textColor="#000"
+
+                />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/RegistActivity_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_20"
+                android:hint="请输入手机号码"
+                android:textColor="#000"
+                tools:ignore="SpeakableTextPresentCheck"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="wrap_content"
+                android:text="密   码 :"
+                android:textSize="@dimen/sp_20"
+                android:textColor="#000"
+                />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/RegistActivity_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_20"
+                android:inputType="textPassword"
+                android:textColor="#000"
+                android:hint="密码最低6位"
+                tools:ignore="SpeakableTextPresentCheck"
+                />
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/RegistActivity_tijiao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:onClick="regist"
+            android:background="@drawable/loge_btn_background"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+    </LinearLayout>
+
+</LinearLayout>

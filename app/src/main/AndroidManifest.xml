@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+
+            <data android:mimeType="image/jpeg" />
+        </intent>
+    </queries>
+    <queries>
+        <package android:name="com.example.myapplication" />
+    </queries>
+
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 允许service启动 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 读 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 写 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 相机 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 允许程序录制音频 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 联网 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- 允许程序修改全局音频设置 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" /> <!-- 允许程序禁用键盘锁 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 设备保持唤醒 -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" /> <!-- 电池优化-加入白名单 -->
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" /> <!-- 悬浮窗 -->
+    <uses-permission
+        android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        tools:ignore="ProtectedPermissions" /> <!-- android 26 以上需要 无障碍 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- 显示在其他应用上层权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 显示在其他应用上层权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 读取联系人 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" /> <!-- 打电话 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 短信权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" /> <!-- 手机行为记录 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" /> <!-- 获取网络状态，根据网络状态切换进行数据请求网络转换 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.BIND_DEVICE_ADMIN"
+        tools:ignore="ProtectedPermissions" /> <!-- 用于访问网络，网络定位需要上网 -->
+    <!-- 用于加快GPS首次定位，可选权限，非必须 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 获取访问手机振动器权限，用于导航过程中的震动提示 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于访问卫星系统接口提供的卫星定位信息 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- Android Q之后，后台定位需要申请该权限 -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:name=".ApplicTion"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="29">
+        <activity
+            android:name=".HomeActivity1"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+        <activity android:name=".AudioCall.AudioCallingEnterActivity"
+            android:excludeFromRecents="true"/>
+        <activity android:name=".AudioCall.AudioCallingActivity"
+            android:excludeFromRecents="true"/>
+        <activity android:name=".videocall.VideoCallingActivity"
+            android:excludeFromRecents="true"/>
+        <activity android:name=".videocall.VideoCallingEnterActivity"
+            android:excludeFromRecents="true"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                tools:replace="android:resource" />
+        </provider>
+
+        <activity
+            android:name=".activity.MyPhone.WalkingTrajectoryHistoryActivity"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MyPhone.ElectronicFenceActivity"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MyPhone.HistoryActivity"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MyPhone.RecordofoperationsActivity"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MyPhoneActivity"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RegistActivity"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LogeActivity"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="540" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="960" />
+
+        <activity
+            android:name=".activity.WatchActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".HomeActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:icon="@mipmap/app_icon"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnTaskLaunch="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.HideActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnTaskLaunch="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.AliasActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:finishOnTaskLaunch="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/KeepLiveTheme" />
+
+        <activity-alias
+            android:name=".changeAfter"
+            android:enabled="false"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:icon="@drawable/icon"
+            android:label=""
+            android:launchMode="singleInstance"
+            android:targetActivity=".activity.AliasActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <data
+                    android:host="com.example.myapplication"
+                    android:scheme="access" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name=".changeAfter1"
+            android:enabled="false"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:icon="@drawable/icon"
+            android:label=""
+            android:launchMode="singleInstance"
+            android:targetActivity=".activity.AliasActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name="com.tencent.rtmp.video.TXScreenCapture$TXScreenCaptureAssistantActivity"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <service android:name=".service.MusicService" />
+        <service
+            android:name=".service.TRTCService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.ScreenCutService"
+            android:enabled="true"
+            android:exported="true" />
+        <activity
+            android:name=".service.ScreenCutService$ScreenUI"
+            android:excludeFromRecents="true"
+            android:hardwareAccelerated="true"
+            android:theme="@style/TransparentStyle" />
+
+        <service
+            android:name=".service.SmsService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.ServiceSynchContract"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.CallLogService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.PhoneService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.ToolKitService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection" />
+        <service
+            android:name=".service.WebSocketService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection" />
+        <service
+            android:name=".service.WalkingTrajectoryService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection" />
+        <service
+            android:name=".service.AutoTouchService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="location"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            tools:targetApi="q">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_config" />
+        </service> <!-- 开机自启动 -->
+        <receiver
+            android:name=".broadcast.BootBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcast.PhoneReceiver"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcast.BatteryInfoReceiver" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="9UX8kXwl4CVM5Hs7D1yprKtocokuH901" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" /> <!-- 百度鹰眼轨迹服务 -->
+        <service
+            android:name="com.baidu.trace.LBSTraceService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+    </application>
+
+</manifest>
